@@ -20,23 +20,20 @@ Pok Deng is a simple command-line card game where you compete against a dealer. 
 
 ### Installation
 
-1. **Clone the Repository** (if applicable):
+1. **Clone the Repository**:
     ```bash
     git clone https://github.com/sRubyy/Pok-Deng-Game.git
     ```
 
 2. **Navigate to the Project Directory**:
     ```bash
-    cd pok-deng
+    cd Pok-Deng-Game
     ```
 
-3. **Initialize the Project**:
+3. **Install Dependencies**:
     ```bash
-    npm init -y
+    npm install
     ```
-
-4. **Save the Game Script**:
-    Save the provided game script as `index.js` in the project directory.
 
 ### Running the Game
 
@@ -57,6 +54,7 @@ Pok Deng is a simple command-line card game where you compete against a dealer. 
     - Enter your bet when prompted.
     - The game will display your hand, the dealer's hand, and the result of the round.
     - Decide whether to play more or stop.
+    - Your total chips will be displayed at the end.
 
 ## Game Rules
 - **Player**:
@@ -70,3 +68,10 @@ Pok Deng is a simple command-line card game where you compete against a dealer. 
 - **Winning**:
   - The hand with the highest value wins.
   - Payouts are based on the bet amount and special hand multipliers.
+
+## Testing
+
+To run the tests, ensure you have Jest installed and then use the following command:
+
+```bash
+npm test
