@@ -72,6 +72,16 @@ Pok Deng is a simple command-line card game where you compete against a dealer. 
 ## Testing
 
 To run the tests, ensure you have Jest installed and then use the following command:
+1. **Add the Test Script**:
+    Edit the `package.json` file to include the following in the `"scripts"` section:
+    ```json
+    "scripts": {
+      "test" : "jest",
+      "start": "node index.js"
+    }
+    ```
 
-```bash
-npm test
+2.  **Running the test suit**:
+    ``` bash
+    npm test
+    ```
