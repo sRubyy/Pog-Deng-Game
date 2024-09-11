@@ -1,2 +1,2 @@
-# Pog-Deng-Game
-A simple Pog-Deng game for one player
+# Pok-Deng-Game
+A simple Pok-Deng game for one player
