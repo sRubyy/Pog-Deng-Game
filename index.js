@@ -13,6 +13,14 @@ const ranks = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Que
 // Player wallet to keep track of money
 let playerWallet = 1000; // Initial amount of money for the player
 
+function setPlayerWallet(amount) {
+    playerWallet = amount;
+}
+
+function getPlayerWallet() {
+    return playerWallet;
+}
+
 function createDeck() {
     const deck = [];
     for (let suit of suits) {
@@ -70,6 +78,7 @@ function payout(won, betAmount, multiplier = 1) {
         playerWallet += winnings;
         console.log(`You won!!! Received ${winnings} chips`);
     } else {
+        playerWallet -= betAmount;
         console.log(`You lost!!!`);
     }
 }
@@ -162,3 +171,18 @@ function askForBet() {
 
 // Start the game by asking for the bet
 askForBet();
+
+module.exports = {
+    rl,
+    createDeck,
+    shuffleDeck,
+    getCardValue,
+    calculateHandValue,
+    isPair,
+    isFlush,
+    placeBet,
+    payout,
+    setPlayerWallet,
+    getPlayerWallet,
+    playPokDeng
+};
