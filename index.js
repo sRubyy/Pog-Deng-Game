@@ -78,7 +78,7 @@ function payout(won, betAmount, multiplier = 1) {
         playerWallet += winnings;
         console.log(`You won!!! Received ${winnings} chips`);
     } else {
-        playerWallet -= betAmount;
+        // playerWallet -= betAmount;
         console.log(`You lost!!!`);
     }
 }
@@ -94,8 +94,11 @@ function playPokDeng(betAmount) {
     const playerHand = [deck.pop(), deck.pop()];
     const dealerHand = [deck.pop(), deck.pop()];
 
-    console.log('You got:', playerHand);
-    console.log('The dealer got:', dealerHand);
+    // console.log('You got:', playerHand);
+    // console.log('The dealer got:', dealerHand);
+
+    console.log(`You got ${playerHand.map(card => `${card.suit}-${card.rank}`).join(', ')}`);
+    console.log(`The dealer got ${dealerHand.map(card => `${card.suit}-${card.rank}`).join(', ')}`);
 
     // Calculate the hand values
     const playerPoints = calculateHandValue(playerHand);
@@ -131,11 +134,11 @@ function playPokDeng(betAmount) {
         return;
     }
 
-    // Step 10.6: Payout based on result
+    // Payout based on result
     payout(playerWins, betAmount, multiplier);
 }
 
-// Step 11: Ask the player if they want to continue
+// Ask the player if they want to continue
 function askToContinue() {
     rl.question('Wanna play more (Yes/No)? ', (answer) => {
         if (answer.toLowerCase() === 'yes') {
